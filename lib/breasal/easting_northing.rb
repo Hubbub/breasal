@@ -14,7 +14,7 @@ module Breasal
     # and returns WGS84 Latitude and Longitude
     def to_wgs84
       ll = to_latlng(@easting, @northing, @type)
-      lat_lng = LatLng.new(latitude: ll[:latitude], longitude: ll[:longitude], type: @type)
+      lat_lng = LatLng.new(:latitude => ll[:latitude], :longitude => ll[:longitude], :type => @type)
       lat_lng.to_WGS84
     end
 
